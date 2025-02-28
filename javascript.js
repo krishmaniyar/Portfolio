@@ -12,6 +12,11 @@ var photos = [
     "./images/rock-paper-scissor.png",
     "./images/calculator.png",
     "./images/etch-a-sketch.png",
+    "./images/lapinos-pizza.png",
+    "./images/landing-page.png",
+    "./images/form-page.png",
+    "./images/car-info.png",
+    "./images/recipes.png",
 ]
 
 var projectName = [
@@ -27,6 +32,11 @@ var projectName = [
     "Rock Paper Scissor",
     "Calculator",
     "Etch A Sketch",
+    "Restaurant Page",
+    "Landing Page",
+    "Forms",
+    "Porsche Info",
+    // "Recipes"
 ]
 
 const proLink = [
@@ -42,6 +52,11 @@ const proLink = [
     "https://krishmaniyar.github.io/Project_3/",
     "https://krishmaniyar.github.io/Project_5/",
     "https://krishmaniyar.github.io/Project_4/",
+    "https://krishmaniyar.github.io/Restaurant_Page/",
+    "https://krishmaniyar.github.io/Project_7/",
+    "https://krishmaniyar.github.io/Project_6/",
+    "https://krishmaniyar.github.io/Project_2/",
+    "https://krishmaniyar.github.io/Project_1/",
 ]
 
 const gitLinks = [
@@ -55,8 +70,13 @@ const gitLinks = [
     "https://github.com/krishmaniyar/world_time_app",
     "https://github.com/krishmaniyar/Tic-Tac-Toe",
     "https://github.com/krishmaniyar/Project_3",
-    "https://github.com/krishmaniyar/Project_4",
     "https://github.com/krishmaniyar/Project_5",
+    "https://github.com/krishmaniyar/Project_4",
+    "https://github.com/krishmaniyar/Restaurant_Page",
+    "https://github.com/krishmaniyar/Project_7",
+    "https://github.com/krishmaniyar/Project_6",
+    "https://github.com/krishmaniyar/Project_2",
+    "https://github.com/krishmaniyar/Project_1",
 ]
 
 var category = [
@@ -72,6 +92,11 @@ var category = [
     "Web Game",
     "Web App",
     "Web Game",
+    "Web App",
+    "Web App",
+    "Web App",
+    "Web App",
+    "Web App",
 ]
 
 var projectInfo = [
@@ -87,6 +112,11 @@ var projectInfo = [
     "Play Rock Paper Scissors online! Challenge friends, test strategy, and enjoy a fun, interactive game with instant results. Try now!",
     "A simple and efficient calculator website for quick arithmetic operations, featuring a user-friendly interface and responsive design.",
     "A digital Etch A Sketch for creative drawing, featuring smooth controls, reset options, and an engaging, nostalgic experience.",
+    "Discover a delicious variety of pizzas, sides, and desserts at our restaurant. Enjoy fresh ingredients, bold flavors, and fast delivery!",
+    "A basic landing page with a header, hero section, and a form. Ideal for practicing static layouts and form styling with CSS!",
+    "A simple forms practice page with input fields, checkboxes, radio buttons, dropdowns, and a submit button. Perfect for honing CSS skills!",
+    "A simple Porsche car info page featuring a sleek design, model details, specifications, and a contact form. Great for CSS practice!",
+    "A basic recipes page with a list of dishes, ingredients, step-by-step instructions, and images. Perfect for practicing CSS styling!",
 ]
 
 const links = [
@@ -201,40 +231,57 @@ function displayLinks() {
 }
 
 function displayProject(index) {
-    console.log(index)
     Container.style.display = 'none';
     ProContainer.style.display = 'block';
     ProContainer.style.height = '79vh';
     ProContainer.innerHTML = `  <button  id="back">   
-    <img src="./images/arrow-left.svg" alt="">
-    SEE ALL PROJECTS
-    </button>`;
+                                    <img src="./images/arrow-left.svg" alt="">
+                                    SEE ALL PROJECTS
+                                </button>`;
+
     var ProjectDetails = document.createElement("div");
     ProContainer.appendChild(ProjectDetails).className = "project-details";
+
     var ProjectImg = document.createElement("div");
     ProjectDetails.appendChild(ProjectImg).className = "detail-img";
     ProjectImg.innerHTML = `<img src=${photos[index]} alt="">`;
+
     var Details = document.createElement("div");
     ProjectDetails.appendChild(Details).className = "details";
     Details.innerHTML = `<h1>${projectName[index]}</h1>`;
     Details.innerHTML += `<p>${category[index]}</p>`;
     Details.innerHTML += `<p>${projectInfo[index]}</p>`;
+
     var DetailsButton = document.createElement("div");
     Details.appendChild(DetailsButton).className = "details-button";
     DetailsButton.innerHTML = ` <a class="grey-button" href=${gitLinks[index]} target="_blanck">
-    <img src="./images/github.svg" alt="">
-    View Code
-    </a>`;
+                                    <img src="./images/github.svg" alt="">
+                                    View Code
+                                </a>`;
+
     if(category[index] != "Mobile App") {
         DetailsButton.innerHTML += `<a class="green-button" href=${proLink[index]} target="_blanck">
         View Project
         <img src="./images/open-in-new.svg" alt="">
         </a>`;
     }
+
+    const elements = document.querySelectorAll('.header-link');
+    elements.forEach(element => {
+        element.style.display = "none";
+    });
+    
     document.getElementById("back").addEventListener("click", () => {
         Container.style.display = 'block';
         ProContainer.style.display = 'none';
+        elements.forEach(element => {
+            if (window.innerWidth >= 800) {
+                element.style.display = "block";
+            }
+        });
     })
+    
+
 }
 
 displayCards()

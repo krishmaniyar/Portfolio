@@ -83,6 +83,7 @@ hr {
     margin: 0;
     font-family: "IBM Plex Mono";
     font-size: 12rem;
+    padding-left: 40px;
     letter-spacing: 40px;
     font-weight: 100;
     animation: shine 2s infinite linear;
@@ -144,7 +145,8 @@ hr {
     font-size: .8rem;
 }
 
-.big-font {
+
+.big-font{
     font-size: 1.4rem;
 }
 
@@ -242,7 +244,7 @@ footer a:hover {
 
 footer button {
     background-color: var(--Gray-2);
-    font-size: 1rem;
+    font-size: 1.2rem;
     color: white;
     padding: 0;
     border: 0;
@@ -392,16 +394,22 @@ footer button:hover {
 }
 
 @media screen and (max-width: 1000px) {
-    .info-container {flex-direction: column-reverse;}
+    .info-container {
+        flex-direction: column-reverse;
+    }
+
     .display-work {
         grid-template-columns: 1fr;
     }
+
     #skill-link {
         grid-template-columns: 1fr 1fr;
     }
+
     .detail-img {
         width: 80%;
     }
+
     .project-details {
         flex-direction: column;
         font-size: 10px;
@@ -412,11 +420,17 @@ footer button:hover {
     * {
         font-size: 13px;
     }
+
     .display-name h1 {
         font-size: 7rem;
     }
+
     #skill-link {
         gap: 5px;
+    }
+
+    .header-link {
+        display: none;
     }
 }
 
@@ -424,21 +438,30 @@ footer button:hover {
     * {
         font-size: 10px;
     }
+
     .detail-img {
         width: 100%;
     }
+
     .display-name {
         height: 150px;
 
     }
+
     .display-name h1 {
         font-size: 4rem;
     }
+
     .list-of-cards {
         padding: 5%;
         width: 90%;
     }
+
     .project-name p {
         width: 100px;
+    }
+    .display-name h1 {
+        letter-spacing: 30px;
+        padding-left: 30px;
     }
 }
