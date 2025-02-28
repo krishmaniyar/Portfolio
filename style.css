@@ -399,8 +399,12 @@ footer button:hover {
     #skill-link {
         grid-template-columns: 1fr 1fr;
     }
+    .detail-img {
+        width: 80%;
+    }
     .project-details {
         flex-direction: column;
+        font-size: 10px;
     }
 }
 
@@ -419,6 +423,9 @@ footer button:hover {
 @media screen and (max-width: 600px) {
     * {
         font-size: 10px;
+    }
+    .detail-img {
+        width: 100%;
     }
     .display-name {
         height: 150px;
