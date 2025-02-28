@@ -408,7 +408,12 @@ footer button:hover {
     * {
         font-size: 13px;
     }
-    .display-name h1 {font-size: 7rem;}
+    .display-name h1 {
+        font-size: 7rem;
+    }
+    #skill-link {
+        gap: 5px;
+    }
 }
 
 @media screen and (max-width: 600px) {
