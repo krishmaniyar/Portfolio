@@ -176,6 +176,19 @@ const imgLink = [
     "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/android/android-original.svg",
 ]
 
+document.addEventListener("DOMContentLoaded", function () {
+    const text = "HEY, I'M KRISH MANIYAR 👋";
+    let i = 0;
+    function typeEffect() {
+        if (i < text.length) {
+            document.getElementById("big-font").innerHTML = text.substring(0, i + 1) + '<span class="cursor" style="font-size: 1.2em; ">|</span>';
+            i++;
+            setTimeout(typeEffect, 120);
+        }
+    }
+    typeEffect();
+});
+
 var DisplayWork = document.getElementById("display-work")
 var SkillLink = document.getElementById("skill-link")
 var Container = document.getElementById("container");
@@ -184,14 +197,14 @@ var ProContainer = document.getElementById("pro-container");
 function displayCards() {
     for (var i = 0; i < projectName.length; i++) {
         let Card = document.createElement("button");
-        DisplayWork.appendChild(Card).className = "card";
+        DisplayWork.appendChild(Card).className = "card trans";
         Card.setAttribute("onclick", `displayProject(${i})`)
-        if (i % 2 == 0) {
-            Card.id = `move-right`;
-        }
-        else {
-            Card.id = `move-left`;
-        }
+        // if (i % 2 == 0) {
+        //     Card.id = `move-right`;
+        // }
+        // else {
+        //     Card.id = `move-left`;
+        // }
         Card.href = "";
         let CardImg = document.createElement("div");
         Card.appendChild(CardImg).className = "card-img";
@@ -223,7 +236,7 @@ function copyEmail() {
 function displayLinks() {
     for (var i = 0; i < links.length; i++) {
         let Link = document.createElement("a");
-        SkillLink.appendChild(Link).className = "links";
+        SkillLink.appendChild(Link).className = "links trans";
         Link.href = links[i];
         Link.innerHTML = `<img src=${imgLink[i]}></img>`;
         Link.innerHTML += `${skillName[i]}`;
@@ -244,10 +257,12 @@ function displayProject(index) {
 
     var ProjectImg = document.createElement("div");
     ProjectDetails.appendChild(ProjectImg).className = "detail-img";
+    ProjectDetails.appendChild(ProjectImg).id = "move-right";
     ProjectImg.innerHTML = `<img src=${photos[index]} alt="">`;
 
     var Details = document.createElement("div");
     ProjectDetails.appendChild(Details).className = "details";
+    ProjectDetails.appendChild(Details).id = "move-left";
     Details.innerHTML = `<h1>${projectName[index]}</h1>`;
     Details.innerHTML += `<p>${category[index]}</p>`;
     Details.innerHTML += `<p>${projectInfo[index]}</p>`;
