@@ -1,9 +1,9 @@
 
 var photos = [
-    "./images/book-library.png",
     "./images/to-do-list.png",
     "./images/cv-builder.png",
     "./images/netflix-clone.png",
+    "./images/book-library.png",
     "./images/money-manager.png",
     "./images/ecomind.png",
     "./images/weather.png",
@@ -20,10 +20,10 @@ var photos = [
 ]
 
 var projectName = [
-    "Book Library",
     "To Do List",
     "CV Builder",
     "NetFlix Clone",
+    "Book Library",
     "Money Manager",
     "EcoMind",
     "Weather",
@@ -40,10 +40,10 @@ var projectName = [
 ]
 
 const proLink = [
-    "https://krishmaniyar.github.io/Book_Library/",
     "https://krishmaniyar.github.io/To_Do_List/",
     "https://krishmaniyar.github.io/cv-builder/",
     "https://krishmaniyar.github.io/netflix-clone/",
+    "https://krishmaniyar.github.io/Book_Library/",
     "",
     "",
     "",
@@ -60,10 +60,10 @@ const proLink = [
 ]
 
 const gitLinks = [
-    "https://github.com/krishmaniyar/Book_Library",
     "https://github.com/krishmaniyar/To_Do_List",
     "https://github.com/krishmaniyar/cv-builder",
     "https://github.com/krishmaniyar/netflix-clone",
+    "https://github.com/krishmaniyar/Book_Library",
     "https://github.com/krishmaniyar/money-manager",
     "https://github.com/Mo-Kash/EcoMind",
     "https://github.com/krishmaniyar/weather_app",
@@ -100,10 +100,10 @@ var category = [
 ]
 
 var projectInfo = [
-    "An organized book library website for browsing, managing, and discovering books with a user-friendly interface and efficient search features.",
     "A simple and intuitive To-Do List app for task management, featuring add, edit, delete, and completion tracking for productivity.",
     "A dynamic CV Builder website to create, customize, and download professional resumes with an easy-to-use interface and modern templates.",
     "A Netflix Clone built with React.js and Firebase Authentication, featuring user login, movie browsing, and a sleek, responsive UI.",
+    "An organized book library website for browsing, managing, and discovering books with a user-friendly interface and efficient search features.",
     "Money Manager is a Flutter-based app for tracking expenses, managing budgets, and analyzing financial transactions with an intuitive user interface.",
     "Scrap Classifier is a Flutter-based app that identifies and classifies waste materials using AI, promoting recycling and sustainable waste management.",
     "Weather App is a Flutter-based application providing real-time forecasts, temperature, humidity, wind speed, and detailed weather insights with a sleek UI.",
@@ -196,25 +196,24 @@ var ProContainer = document.getElementById("pro-container");
 
 function displayCards() {
     for (var i = 0; i < projectName.length; i++) {
+
         let Card = document.createElement("button");
         DisplayWork.appendChild(Card).className = "card trans";
         Card.setAttribute("onclick", `displayProject(${i})`)
-        // if (i % 2 == 0) {
-        //     Card.id = `move-right`;
-        // }
-        // else {
-        //     Card.id = `move-left`;
-        // }
         Card.href = "";
+
         let CardImg = document.createElement("div");
         Card.appendChild(CardImg).className = "card-img";
         CardImg.innerHTML = `<img src="${photos[i]}" alt="${projectName[i]}">`;
+
         let CardText = document.createElement("div");
         Card.appendChild(CardText).className = "card-text";
+
         let ProjectName = document.createElement("div");
         CardText.appendChild(ProjectName).className = "project-name";
         ProjectName.innerHTML = `<p>${projectName[i]}<p>`;
         ProjectName.innerHTML += `<p>${category[i]}<p>`;
+        
         let ProjectInfo = document.createElement("div");
         CardText.appendChild(ProjectInfo).className = "project-info";
         ProjectInfo.innerHTML = `${projectInfo[i]}`;
