@@ -22,10 +22,20 @@
             <ul>
                 <a href="#personal-info" class="header-link">About Me</a>
                 <a href="#skills" class="header-link">Skills</a>
-                <a href="#list-of-cards" class="header-link">Projects</a>
+                <div class="drop header-link">
+                    Projects
+                    <div class="dropdown">
+                        <a href="#web">Web App</a>
+                        <hr>
+                        <a href="#app">Mobile App</a>
+                    </div>
+                </div>
                 <a href="#contact-me" class="header-link">Contact me</a>
                 <a href="https://github.com/krishmaniyar" target="_blank">GitHub</a>
                 <a href="https://www.linkedin.com/in/krish-maniyar/">Linkedin</a>
+                <button id="theme">
+                    <img src="./images/star.svg" alt="">
+                </button>
             </ul>
         </div>
     </header>
@@ -72,13 +82,7 @@
             </div>
         </div>
         <div class="list-of-cards" id="list-of-cards">
-            <h1 class="bold">
-                PROJECTS
-            </h1>
-            <br>
-            <div class="display-work" id="display-work">
 
-            </div>
         </div>
         <div id="contact-me">
             <div class="contact-left">
@@ -95,29 +99,30 @@
                     <label for="message">Message</label>
                     <br>
                     <textarea id="message" name="message" rows="5"></textarea>
-                </form>                
+                </form>  
+                <button class="links trans" id="submit">Submit</button>              
             </div>
             <div class="contact-right">
                 <p>
-                    <img src="./images/email.svg" alt="email">
+                    <img src="./images/email.svg" alt="email" id="invert">
                     krishmaniyar27@gmail.com
                 </p>
                 <p>
-                    <img src="./images/phone.svg" alt="phone">
+                    <img src="./images/phone.svg" alt="phone" id="invert">
                     +91 9429048002
                 </p>
                 <p>
-                    <img src="./images/location.svg" alt="location">
+                    <img src="./images/location.svg" alt="location" id="invert">
                     Rajkot, Gujarat, India
                 </p>
                 <a href="https://www.linkedin.com/in/krish-maniyar/">
-                    <img src="./images/linkedin.svg" alt="linkedin" class="trans">
+                    <img src="./images/linkedin.svg" alt="linkedin" class="trans" id="invert">
                 </a>
                 <a href="https://github.com/krishmaniyar">
-                    <img src="./images/github.svg" alt="github" class="trans">
+                    <img src="./images/github.svg" alt="github" class="trans" id="invert">
                 </a>
                 <a href="https://x.com/ManiyarKrish">
-                    <img src="./images/twitter.svg" alt="twitter" class="trans">
+                    <img src="./images/twitter.svg" alt="twitter" class="trans" id="invert">
                 </a>
             </div>
         </div>
@@ -132,6 +137,8 @@
         <a href="https://www.linkedin.com/in/krish-maniyar/">Linkedin</a>
         /
         <a href="https://github.com/krishmaniyar">GitHub</a>
+        /
+        <a href="./images/krish_CV.pdf" download="krish_CV">Download CV</a>
     </footer>
     <script src="./javascript.js"></script>
 </body>

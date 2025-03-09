@@ -1,209 +1,176 @@
-const projectData = new Map([
-    ["To Do List", {
-        image: "./images/to-do-list.png",
-        name: "To Do List",
-        proLink: "https://krishmaniyar.github.io/To_Do_List/",
-        gitLink: "https://github.com/krishmaniyar/To_Do_List",
-        category: "Web App",
-        projectInfo: "A simple and intuitive To-Do List app for task management, featuring add, edit, delete, and completion tracking for productivity."
-    }],
-    ["CV Builder", {
-        image: "./images/cv-builder.png",
-        name: "CV Builder",
-        proLink: "https://krishmaniyar.github.io/cv-builder/",
-        gitLink: "https://github.com/krishmaniyar/cv-builder",
-        category: "Web App",
-        projectInfo: "A dynamic CV Builder website to create, customize, and download professional resumes with an easy-to-use interface and modern templates."
-    }],
-    ["NetFlix Clone", {
-        image: "./images/netflix-clone.png",
-        name: "NetFlix Clone",
-        proLink: "https://krishmaniyar.github.io/netflix-clone/",
-        gitLink: "https://github.com/krishmaniyar/netflix-clone",
-        category: "Web App",
-        projectInfo: "A Netflix Clone built with React.js and Firebase Authentication, featuring user login, movie browsing, and a sleek, responsive UI."
-    }],
-    ["Book Library", {
-        image: "./images/book-library.png",
-        name: "Book Library",
-        proLink: "https://krishmaniyar.github.io/Book_Library/",
-        gitLink: "https://github.com/krishmaniyar/Book_Library",
-        category: "Web App",
-        projectInfo: "An organized book library website for browsing, managing, and discovering books with a user-friendly interface and efficient search features."
-    }],
-    ["Money Manager", {
-        image: "./images/money-manager.png",
-        name: "Money Manager",
-        proLink: "",
-        gitLink: "https://github.com/krishmaniyar/money-manager",
-        category: "Mobile App",
-        projectInfo: "Money Manager is a Flutter-based app for tracking expenses, managing budgets, and analyzing financial transactions with an intuitive user interface."
-    }],
-    ["EcoMind", {
-        image: "./images/ecomind.png",
-        name: "EcoMind",
-        proLink: "",
-        gitLink: "https://github.com/Mo-Kash/EcoMind",
-        category: "Mobile App",
-        projectInfo: "Scrap Classifier is a Flutter-based app that identifies and classifies waste materials using AI, promoting recycling and sustainable waste management."
-    }],
-    ["Weather", {
-        image: "./images/weather.png",
-        name: "Weather",
-        proLink: "",
-        gitLink: "https://github.com/krishmaniyar/weather_app",
-        category: "Mobile App",
-        projectInfo: "Weather App is a Flutter-based application providing real-time forecasts, temperature, humidity, wind speed, and detailed weather insights with a sleek UI."
-    }],
-    ["World Time App", {
-        image: "./images/world-time.png",
-        name: "World Time App",
-        proLink: "",
-        gitLink: "https://github.com/krishmaniyar/world_time_app",
-        category: "Mobile App",
-        projectInfo: "World Time App is a Flutter-based application displaying global time zones, sunrise/sunset details, and real-time clock with a beautiful UI."
-    }],
-    ["Tic Tac Toe", {
-        image: "./images/tic-tac-toe.png",
-        name: "Tic Tac Toe",
-        proLink: "https://krishmaniyar.github.io/Tic-Tac-Toe/",
-        gitLink: "https://github.com/krishmaniyar/Tic-Tac-Toe",
-        category: "Web Game",
-        projectInfo: "A fun and interactive Tic Tac Toe game with a sleek design, multiplayer mode, and smooth gameplay for endless entertainment."
-    }],
-    ["Rock Paper Scissors", {
-        image: "./images/rock-paper-scissor.png",
-        name: "Rock Paper Scissors",
-        proLink: "https://krishmaniyar.github.io/Project_3/",
-        gitLink: "https://github.com/krishmaniyar/Project_3",
-        category: "Web Game",
-        projectInfo: "Play Rock Paper Scissors online! Challenge friends, test strategy, and enjoy a fun, interactive game with instant results. Try now!"
-    }],
-    ["Calculator", {
-        image: "./images/calculator.png",
-        name: "Calculator",
-        proLink: "https://krishmaniyar.github.io/Project_5/",
-        gitLink: "https://github.com/krishmaniyar/Project_5",
-        category: "Web App",
-        projectInfo: "A simple and efficient calculator website for quick arithmetic operations, featuring a user-friendly interface and responsive design."
-    }],
-    ["Etch A Sketch", {
-        image: "./images/etch-a-sketch.png",
-        name: "Etch A Sketch",
-        proLink: "https://krishmaniyar.github.io/Project_4/",
-        gitLink: "https://github.com/krishmaniyar/Project_4",
-        category: "Web Game",
-        projectInfo: "A digital Etch A Sketch for creative drawing, featuring smooth controls, reset options, and an engaging, nostalgic experience."
-    }],
-    ["Restaurant Page", {
-        image: "./images/lapinos-pizza.png",
-        name: "Restaurant Page",
-        proLink: "https://krishmaniyar.github.io/Restaurant_Page/",
-        gitLink: "https://github.com/krishmaniyar/Restaurant_Page",
-        category: "Web App",
-        projectInfo: "Discover a delicious variety of pizzas, sides, and desserts at our restaurant. Enjoy fresh ingredients, bold flavors, and fast delivery!"
-    }],
-    ["Landing Page", {
-        image: "./images/landing-page.png",
-        name: "Landing Page",
-        proLink: "https://krishmaniyar.github.io/Project_7/",
-        gitLink: "https://github.com/krishmaniyar/Project_7",
-        category: "Web App",
-        projectInfo: "A basic landing page with a header, hero section, and a form. Ideal for practicing static layouts and form styling with CSS!"
-    }],
-    ["Forms", {
-        image: "./images/form-page.png",
-        name: "Forms",
-        proLink: "https://krishmaniyar.github.io/Project_6/",
-        gitLink: "https://github.com/krishmaniyar/Project_6",
-        category: "Web App",
-        projectInfo: "A simple forms practice page with input fields, checkboxes, radio buttons, dropdowns, and a submit button. Perfect for honing CSS skills!"
-    }],
-    ["Porsche Info", {
-        image: "./images/car-info.png",
-        name: "Porsche Info",
-        proLink: "https://krishmaniyar.github.io/Project_2/",
-        gitLink: "https://github.com/krishmaniyar/Project_2",
-        category: "Web App",
-        projectInfo: "A simple Porsche car info page featuring a sleek design, model details, specifications, and a contact form. Great for CSS practice!"
-    }],
-    // ["Recipes", {
-    //     image: "./images/recipes.png",
-    //     name: "Recipes",
-    //     proLink: "https://krishmaniyar.github.io/Project_1/",
-    //     gitLink: "https://github.com/krishmaniyar/Project_1",
-    //     category: "Web App",
-    //     projectInfo: "A basic recipes page with a list of dishes, ingredients, step-by-step instructions, and images. Perfect for practicing CSS styling!"
-    // }]
-]);
 
-const skillData = new Map([
-    ["HTML", { 
-        link: "https://www.w3.org/html/", 
-        img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-plain.svg" 
-    }],
-    ["CSS", { 
-        link: "https://www.w3schools.com/css/", 
-        img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-plain.svg" 
-    }],
-    ["JavaScript", { 
-        link: "https://developer.mozilla.org/en-US/docs/Web/JavaScript", 
-        img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-plain.svg" 
-    }],
-    ["ReactJs", { 
-        link: "https://react.dev/", 
-        img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" 
-    }],
-    ["Webpacks", { 
-        link: "https://webpack.js.org/", 
-        img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/webpack/webpack-original.svg" 
-    }],
-    ["Flutter", { 
-        link: "https://flutter.dev/", 
-        img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg" 
-    }],
-    ["Firebase", { 
-        link: "https://firebase.google.com/", 
-        img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original.svg" 
-    }],
-    ["GitHub", { 
-        link: "https://github.com/", 
-        img: "./images/github.svg" 
-    }],
-    ["Matlab", { 
-        link: "https://www.mathworks.com/", 
-        img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matlab/matlab-original.svg" 
-    }],
-    ["Dart", { 
-        link: "https://dart.dev/", 
-        img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original.svg" 
-    }],
-    ["Linux", { 
-        link: "https://www.linux.org/", 
-        img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg" 
-    }],
-    ["C", { 
-        link: "https://www.cprogramming.com/", 
-        img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg" 
-    }],
-    ["C++", { 
-        link: "https://www.w3schools.com/cpp/", 
-        img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg" 
-    }],
-    ["Python", { 
-        link: "https://www.python.org/", 
-        img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" 
-    }],
-    ["Java", { 
-        link: "https://www.java.com/en/", 
-        img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" 
-    }],
-    ["Android", { 
-        link: "https://developer.android.com/", 
-        img: "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/android/android-original.svg" 
-    }]
-]);
+var photos = [
+    "./images/to-do-list.png",
+    "./images/cv-builder.png",
+    "./images/netflix-clone.png",
+    "./images/book-library.png",
+    "./images/tic-tac-toe.png",
+    "./images/rock-paper-scissor.png",
+    "./images/calculator.png",
+    "./images/etch-a-sketch.png",
+    "./images/lapinos-pizza.png",
+    "./images/landing-page.png",
+    "./images/form-page.png",
+    "./images/car-info.png",
+    "./images/money-manager.png",
+    "./images/ecomind.png",
+    "./images/weather.png",
+    "./images/world-time.png",
+]
 
+var projectName = [
+    "To Do List",
+    "CV Builder",
+    "NetFlix Clone",
+    "Book Library",
+    "Tic Tac Toe",
+    "Rock Paper Scissor",
+    "Calculator",
+    "Etch A Sketch",
+    "Restaurant Page",
+    "Landing Page",
+    "Forms",
+    "Porsche Info",
+    "Money Manager",
+    "EcoMind",
+    "Weather",
+    "World Time App",
+]
+
+const proLink = [
+    "https://krishmaniyar.github.io/To_Do_List/",
+    "https://krishmaniyar.github.io/cv-builder/",
+    "https://krishmaniyar.github.io/netflix-clone/",
+    "https://krishmaniyar.github.io/Book_Library/",
+    "https://krishmaniyar.github.io/Tic-Tac-Toe/",
+    "https://krishmaniyar.github.io/Project_3/",
+    "https://krishmaniyar.github.io/Project_5/",
+    "https://krishmaniyar.github.io/Project_4/",
+    "https://krishmaniyar.github.io/Restaurant_Page/",
+    "https://krishmaniyar.github.io/Project_7/",
+    "https://krishmaniyar.github.io/Project_6/",
+    "https://krishmaniyar.github.io/Project_2/",
+    "https://krishmaniyar.github.io/Project_1/",
+    "",
+    "",
+    "",
+    "",
+]
+
+const gitLinks = [
+    "https://github.com/krishmaniyar/To_Do_List",
+    "https://github.com/krishmaniyar/cv-builder",
+    "https://github.com/krishmaniyar/netflix-clone",
+    "https://github.com/krishmaniyar/Book_Library",
+    "https://github.com/krishmaniyar/Tic-Tac-Toe",
+    "https://github.com/krishmaniyar/Project_3",
+    "https://github.com/krishmaniyar/Project_5",
+    "https://github.com/krishmaniyar/Project_4",
+    "https://github.com/krishmaniyar/Restaurant_Page",
+    "https://github.com/krishmaniyar/Project_7",
+    "https://github.com/krishmaniyar/Project_6",
+    "https://github.com/krishmaniyar/Project_2",
+    "https://github.com/krishmaniyar/Project_1",
+    "https://github.com/krishmaniyar/money-manager",
+    "https://github.com/Mo-Kash/EcoMind",
+    "https://github.com/krishmaniyar/weather_app",
+    "https://github.com/krishmaniyar/world_time_app",
+]
+
+var category = [
+    "Web App",
+    "Web App",
+    "Web App",
+    "Web App",
+    "Web Game",
+    "Web Game",
+    "Web App",
+    "Web Game",
+    "Web App",
+    "Web App",
+    "Web App",
+    "Web App",
+    "Mobile App",
+    "Mobile App",
+    "Mobile App",
+    "Mobile App",
+]
+
+var projectInfo = [
+    "A simple and intuitive To-Do List app for task management, featuring add, edit, delete, and completion tracking for productivity.",
+    "A dynamic CV Builder website to create, customize, and download professional resumes with an easy-to-use interface and modern templates.",
+    "A Netflix Clone built with React.js and Firebase Authentication, featuring user login, movie browsing, and a sleek, responsive UI.",
+    "An organized book library website for browsing, managing, and discovering books with a user-friendly interface and efficient search features.",
+    "A fun and interactive Tic Tac Toe game with a sleek design, multiplayer mode, and smooth gameplay for endless entertainment.",
+    "Play Rock Paper Scissors online! Challenge friends, test strategy, and enjoy a fun, interactive game with instant results. Try now!",
+    "A simple and efficient calculator website for quick arithmetic operations, featuring a user-friendly interface and responsive design.",
+    "A digital Etch A Sketch for creative drawing, featuring smooth controls, reset options, and an engaging, nostalgic experience.",
+    "Discover a delicious variety of pizzas, sides, and desserts at our restaurant. Enjoy fresh ingredients, bold flavors, and fast delivery!",
+    "A basic landing page with a header, hero section, and a form. Ideal for practicing static layouts and form styling with CSS!",
+    "A simple forms practice page with input fields, checkboxes, radio buttons, dropdowns, and a submit button. Perfect for honing CSS skills!",
+    "A simple Porsche car info page featuring a sleek design, model details, specifications, and a contact form. Great for CSS practice!",
+    "Money Manager is a Flutter-based app for tracking expenses, managing budgets, and analyzing financial transactions with an intuitive user interface.",
+    "Scrap Classifier is a Flutter-based app that identifies and classifies waste materials using AI, promoting recycling and sustainable waste management.",
+    "Weather App is a Flutter-based application providing real-time forecasts, temperature, humidity, wind speed, and detailed weather insights with a sleek UI.",
+    "World Time App is a Flutter-based application displaying global time zones, sunrise/sunset details, and real-time clock with a beautiful UI.",
+]
+
+const links = [
+    "https://www.w3.org/html/",
+    "https://www.w3schools.com/css/",
+    "https://developer.mozilla.org/en-US/docs/Web/JavaScript",
+    "https://react.dev/",
+    "https://webpack.js.org/",
+    "https://flutter.dev/",
+    "https://firebase.google.com/",
+    "https://github.com/",
+    "https://www.mathworks.com/",
+    "https://dart.dev/",
+    "https://www.linux.org/",
+    "https://www.cprogramming.com/",
+    "https://www.w3schools.com/cpp/",
+    "https://www.python.org/",
+    "https://www.java.com/en/",
+    "https://developer.android.com/",
+]
+
+const skillName = [
+    "HTML",
+    "CSS",
+    "JavaScript",
+    "ReactJs",
+    "Webpacks",
+    "Flutter",
+    "Firebase",
+    "GitHub",
+    "Matlab",
+    "Dart",
+    "Linux",
+    "C",
+    "C++",
+    "Python",
+    "Java",
+    "Android",
+]
+
+const imgLink = [
+    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-plain.svg",
+    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-plain.svg",
+    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-plain.svg",
+    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg",
+    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/webpack/webpack-original.svg",
+    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/flutter/flutter-original.svg",
+    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/firebase/firebase-original.svg",
+    "./images/github.svg",
+    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/matlab/matlab-original.svg",
+    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/dart/dart-original.svg",
+    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/linux/linux-original.svg",
+    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg",
+    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg",
+    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg",
+    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg",
+    "https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/android/android-original.svg",
+]
 
 document.addEventListener("DOMContentLoaded", function () {
     const text = "HEY, I'M KRISH MANIYAR 👋";
@@ -218,35 +185,72 @@ document.addEventListener("DOMContentLoaded", function () {
     typeEffect();
 });
 
-var DisplayWork = document.getElementById("display-work")
 var SkillLink = document.getElementById("skill-link")
 var Container = document.getElementById("container");
 var ProContainer = document.getElementById("pro-container");
 
 function displayCards() {
-    projectData.forEach((project, name) => {
+    var ListOfCards = document.getElementById("list-of-cards");
+    ListOfCards.innerHTML = `<h1 class="bold" id="web">
+                                WEB PROJECTS
+                            </h1>
+                            <br>`;
+    var DisplayWork = document.createElement("div");
+    ListOfCards.appendChild(DisplayWork).className = 'display-work';
+    DisplayWork.id = 'display-work';
+    for (var i = 0; i < projectName.length - 4; i++) {
 
         let Card = document.createElement("button");
         DisplayWork.appendChild(Card).className = "card trans";
-        Card.setAttribute("onclick", `displayProject('${name}')`);
+        Card.setAttribute("onclick", `displayProject(${i})`)
         Card.href = "";
 
         let CardImg = document.createElement("div");
         Card.appendChild(CardImg).className = "card-img";
-        CardImg.innerHTML = `<img src="${project.image}" alt="${name}">`;
+        CardImg.innerHTML = `<img src="${photos[i]}" alt="${projectName[i]}">`;
 
         let CardText = document.createElement("div");
         Card.appendChild(CardText).className = "card-text";
 
         let ProjectName = document.createElement("div");
         CardText.appendChild(ProjectName).className = "project-name";
-        ProjectName.innerHTML = `<p>${name}</p>`;
-        ProjectName.innerHTML += `<p>${project.category}</p>`;
+        ProjectName.innerHTML = `<p>${projectName[i]}<p>`;
+        ProjectName.innerHTML += `<p>${category[i]}<p>`;
         
         let ProjectInfo = document.createElement("div");
         CardText.appendChild(ProjectInfo).className = "project-info";
-        ProjectInfo.innerHTML = `${project.projectInfo}`;
-    });
+        ProjectInfo.innerHTML = `${projectInfo[i]}`;
+    }
+    ListOfCards.innerHTML += `<h1 class="bold" id="app">
+                MOBILE APP PROJECTS
+            </h1>
+            <br>`;
+    DisplayWork.innerHTML = "";
+    ListOfCards.appendChild(DisplayWork).className = 'display-work';
+    DisplayWork.id = 'display-work';
+    for (var i = projectName.length - 4; i < projectName.length; i++) {
+
+        let Card = document.createElement("button");
+        DisplayWork.appendChild(Card).className = "card trans";
+        Card.setAttribute("onclick", `displayProject(${i})`)
+        Card.href = "";
+
+        let CardImg = document.createElement("div");
+        Card.appendChild(CardImg).className = "card-img";
+        CardImg.innerHTML = `<img src="${photos[i]}" alt="${projectName[i]}">`;
+
+        let CardText = document.createElement("div");
+        Card.appendChild(CardText).className = "card-text";
+
+        let ProjectName = document.createElement("div");
+        CardText.appendChild(ProjectName).className = "project-name";
+        ProjectName.innerHTML = `<p>${projectName[i]}<p>`;
+        ProjectName.innerHTML += `<p>${category[i]}<p>`;
+        
+        let ProjectInfo = document.createElement("div");
+        CardText.appendChild(ProjectInfo).className = "project-info";
+        ProjectInfo.innerHTML = `${projectInfo[i]}`;
+    }
 }
 
 function copyEmail() {
@@ -262,28 +266,23 @@ function copyEmail() {
 }
 
 function displayLinks() {
-    skillData.forEach((data, skill) => {
+    for (var i = 0; i < links.length; i++) {
         let Link = document.createElement("a");
         SkillLink.appendChild(Link).className = "links trans";
-        Link.href = data.link;
-        Link.innerHTML = `<img src="${data.img}" alt="${skill}"></img>`;
-        Link.innerHTML += `${skill}`;
-    });
+        Link.href = links[i];
+        Link.innerHTML = `<img src=${imgLink[i]}></img>`;
+        Link.innerHTML += `${skillName[i]}`;
+    }
 }
 
-function displayProject(projectName) {
+function displayProject(index) {
     Container.style.display = 'none';
     ProContainer.style.display = 'block';
     ProContainer.style.height = '79vh';
-    
-    ProContainer.innerHTML = `  
-        <button id="back">   
-            <img src="./images/arrow-left.svg" alt="">
-            SEE ALL PROJECTS
-        </button>
-    `;
-
-    const project = projectData.get(projectName);
+    ProContainer.innerHTML = `  <button  id="back">   
+                                    <img src="./images/arrow-left.svg" alt="" id="invert">
+                                    SEE ALL PROJECTS
+                                </button>`;
 
     var ProjectDetails = document.createElement("div");
     ProContainer.appendChild(ProjectDetails).className = "project-details";
@@ -291,28 +290,26 @@ function displayProject(projectName) {
     var ProjectImg = document.createElement("div");
     ProjectDetails.appendChild(ProjectImg).className = "detail-img";
     ProjectDetails.appendChild(ProjectImg).id = "move-right";
-    ProjectImg.innerHTML = `<img src="${project.image}" alt="${projectName}">`;
+    ProjectImg.innerHTML = `<img src=${photos[index]} alt="">`;
 
     var Details = document.createElement("div");
     ProjectDetails.appendChild(Details).className = "details";
     ProjectDetails.appendChild(Details).id = "move-left";
-    Details.innerHTML = `<h1>${projectName}</h1>`;
-    Details.innerHTML += `<p>${project.category}</p>`;
-    Details.innerHTML += `<p>${project.projectInfo}</p>`;
+    Details.innerHTML = `<h1>${projectName[index]}</h1>`;
+    Details.innerHTML += `<p>${category[index]}</p>`;
+    Details.innerHTML += `<p>${projectInfo[index]}</p>`;
 
     var DetailsButton = document.createElement("div");
     Details.appendChild(DetailsButton).className = "details-button";
-    DetailsButton.innerHTML = ` 
-        <a class="grey-button" href="${project.gitLink}" target="_blank">
-            <img src="./images/github.svg" alt="">
-            View Code
-        </a>
-    `;
+    DetailsButton.innerHTML = ` <a class="grey-button" href=${gitLinks[index]} target="_blanck">
+                                    <img src="./images/github.svg" alt="">
+                                    View Code
+                                </a>`;
 
-    if (project.category !== "Mobile App") {
-        DetailsButton.innerHTML += `<a class="green-button" href="${project.proLink}" target="_blank">
-            View Project
-            <img src="./images/open-in-new.svg" alt="">
+    if(category[index] != "Mobile App") {
+        DetailsButton.innerHTML += `<a class="green-button" href=${proLink[index]} target="_blanck">
+        View Project
+        <img src="./images/open-in-new.svg" alt="">
         </a>`;
     }
 
@@ -329,8 +326,56 @@ function displayProject(projectName) {
                 element.style.display = "block";
             }
         });
-    });
+    })
+    
+
 }
+
+document.getElementById("submit").addEventListener("click", () => {
+    console.log("submit")
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    var message = document.getElementById("message").value;
+    document.getElementById("contact-form").reset();
+})
+
+var isDark = true;
+const root = document.documentElement;
+root.style.setProperty("--backGround", "#161b26");
+root.style.setProperty("--nameBackGround", "#0f141f");
+root.style.setProperty("--Gray-2", "#1f242f");
+root.style.setProperty("--linkHover", "rgb(52, 156, 52)");
+root.style.setProperty("--textColor", "white");
+
+document.getElementById("theme").addEventListener("click", () => {
+    isDark = !isDark;
+    
+    if (!isDark) {
+        root.style.setProperty("--backGround", "#d2caca");
+        root.style.setProperty("--nameBackGround", "#7e7b7b");
+        root.style.setProperty("--Gray-2", "#f5f5f5");
+        root.style.setProperty("--linkHover", "rgb(200, 50, 50)");
+        root.style.setProperty("--textColor", "black");
+        document.getElementById('personal-info').style.backgroundColor = "#574b4b";
+        document.getElementById("theme").innerHTML = '<img src="./images/white-balance-sunny.svg" alt="">';
+        document.querySelectorAll("#invert").forEach(img => {
+            img.style.filter = "invert(100%)";
+        });
+    } else {
+        root.style.setProperty("--backGround", "#161b26");
+        root.style.setProperty("--nameBackGround", "#0f141f");
+        root.style.setProperty("--Gray-2", "#1f242f");
+        root.style.setProperty("--linkHover", "rgb(52, 156, 52)");
+        root.style.setProperty("--textColor", "white");
+        document.getElementById('personal-info').style.backgroundColor = "grey";
+        document.getElementById("theme").innerHTML = '<img src="./images/star.svg" alt="">';
+        document.querySelectorAll("#invert").forEach(img => {
+            img.style.filter = "invert(0%)";
+        });
+    }
+    
+});
+
 
 displayCards()
 displayLinks()
