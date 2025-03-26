@@ -54,7 +54,6 @@ const proLink = [
     "https://krishmaniyar.github.io/Project_7/",
     "https://krishmaniyar.github.io/Project_6/",
     "https://krishmaniyar.github.io/Project_2/",
-    "https://krishmaniyar.github.io/Project_1/",
     "",
     "",
     "",
