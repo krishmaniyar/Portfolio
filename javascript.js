@@ -12,7 +12,9 @@ var photos = [
     "./images/landing-page.png",
     "./images/form-page.png",
     "./images/car-info.png",
-    "./images/money-manager.png",
+    "./images/todo.jpg",
+    "./images/wallpaper.jpg",
+    "./images/money-manager.jpg",
     "./images/ecomind.png",
     "./images/weather.png",
     "./images/world-time.png",
@@ -31,6 +33,8 @@ var projectName = [
     "Landing Page",
     "Forms",
     "Porsche Info",
+    "Todo App",
+    "Wallpaper App",
     "Money Manager",
     "EcoMind",
     "Weather",
@@ -55,6 +59,8 @@ const proLink = [
     "",
     "",
     "",
+    "",
+    "",
 ]
 
 const gitLinks = [
@@ -71,6 +77,8 @@ const gitLinks = [
     "https://github.com/krishmaniyar/Project_6",
     "https://github.com/krishmaniyar/Project_2",
     "https://github.com/krishmaniyar/Project_1",
+    "https://github.com/krishmaniyar/Todo-App",
+    "https://github.com/krishmaniyar/Wallpaper-App",
     "https://github.com/krishmaniyar/money-manager",
     "https://github.com/Mo-Kash/EcoMind",
     "https://github.com/krishmaniyar/weather_app",
@@ -94,6 +102,8 @@ var category = [
     "Mobile App",
     "Mobile App",
     "Mobile App",
+    "Mobile App",
+    "Mobile App",
 ]
 
 var projectInfo = [
@@ -109,6 +119,8 @@ var projectInfo = [
     "A basic landing page with a header, hero section, and a form. Ideal for practicing static layouts and form styling with CSS!",
     "A simple forms practice page with input fields, checkboxes, radio buttons, dropdowns, and a submit button. Perfect for honing CSS skills!",
     "A simple Porsche car info page featuring a sleek design, model details, specifications, and a contact form. Great for CSS practice!",
+    "A Flutter-based ToDo app with Firebase integration, Firestore database, task management, reminders, slidable actions, real-time sync, and a clean UI.",
+    "A Flutter wallpaper app using Pexels API, featuring high-quality images, search, categories, Firebase authentication, and gallery downloads with a sleek UI.",
     "Money Manager is a Flutter-based app for tracking expenses, managing budgets, and analyzing financial transactions with an intuitive user interface.",
     "Scrap Classifier is a Flutter-based app that identifies and classifies waste materials using AI, promoting recycling and sustainable waste management.",
     "Weather App is a Flutter-based application providing real-time forecasts, temperature, humidity, wind speed, and detailed weather insights with a sleek UI.",
@@ -198,7 +210,7 @@ function displayCards() {
     var DisplayWork = document.createElement("div");
     ListOfCards.appendChild(DisplayWork).className = 'display-work';
     DisplayWork.id = 'display-work';
-    for (var i = 0; i < projectName.length - 4; i++) {
+    for (var i = 0; i < projectName.length - 6; i++) {
 
         let Card = document.createElement("button");
         DisplayWork.appendChild(Card).className = "card trans";
@@ -228,7 +240,7 @@ function displayCards() {
     DisplayWork.innerHTML = "";
     ListOfCards.appendChild(DisplayWork).className = 'display-work';
     DisplayWork.id = 'display-work';
-    for (var i = projectName.length - 4; i < projectName.length; i++) {
+    for (var i = projectName.length - 6; i < projectName.length; i++) {
 
         let Card = document.createElement("button");
         DisplayWork.appendChild(Card).className = "card trans";
