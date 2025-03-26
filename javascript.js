@@ -76,7 +76,6 @@ const gitLinks = [
     "https://github.com/krishmaniyar/Project_7",
     "https://github.com/krishmaniyar/Project_6",
     "https://github.com/krishmaniyar/Project_2",
-    "https://github.com/krishmaniyar/Project_1",
     "https://github.com/krishmaniyar/Todo-App",
     "https://github.com/krishmaniyar/Wallpaper-App",
     "https://github.com/krishmaniyar/money-manager",
