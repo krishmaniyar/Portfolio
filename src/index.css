@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    cursor: none;
+  }
+
+  /* Hide cursor on touch devices */
+  @media (hover: none) and (pointer: coarse) {
+    body {
+      cursor: auto !important;
+    }
+    
+    a, button, .btn, .nav-link, .filter-btn, .project-card {
+      cursor: pointer !important;
+    }
+  }
+}
+
+@layer components {
+  /* Custom cursor styles for hover states */
+  .cursor--hover {
+    @apply scale-[1.8] border-white;
+  }
+  
+  .cursor--active {
+    @apply scale-90 bg-accent-primary;
+  }
+
+  /* Additional custom styles that Tailwind can't handle */
+  .bg-gradient-primary {
+    background: linear-gradient(135deg, #64ffda 0%, #a78bfa 25%, #f472b6 50%, #fb7185 75%, #fbbf24 100%);
+    background-size: 200% 200%;
+  }
+
+  /* Glassmorphism utility */
+  .glass-card {
+    @apply backdrop-blur-[25px] backdrop-saturate-[180%] bg-bg-primary/40 border border-glass-border rounded-3xl;
+    @apply shadow-[0_10px_40px_rgba(0,0,0,0.3),inset_0_1px_0_rgba(255,255,255,0.1)];
+    @apply transition-all duration-[400ms] ease-[cubic-bezier(0.4,0,0.2,1)];
+  }
+
+  .glass-card:hover {
+    @apply -translate-y-2 shadow-[0_25px_50px_rgba(0,0,0,0.4),0_0_30px_rgba(100,255,218,0.1)] border-white/15;
+  }
+}
