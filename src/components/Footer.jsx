@@ -145,7 +145,8 @@ const Footer = () => {
 
           <div className="footer-made-with">
             <p className="text-text-secondary text-sm md:text-base m-0 flex items-center justify-center md:justify-start gap-1">
-              Made with <span className="text-red-500">❤️</span> using React & Tailwind CSS
+              Made using React & Tailwind CSS
+              {/* Made with <span className="text-red-500">❤️</span> using React & Tailwind CSS */}
             </p>
           </div>
 

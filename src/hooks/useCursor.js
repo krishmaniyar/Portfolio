@@ -10,12 +10,20 @@ export const useCursor = () => {
 
   useEffect(() => {
     // Check if device supports hover (not a touch device)
-    const mediaQuery = window.matchMedia('(hover: none) and (pointer: coarse)');
-    if (mediaQuery.matches) return; // Exit early on touch devices
+    const isTouchDevice =
+      'ontouchstart' in window ||
+      navigator.maxTouchPoints > 0 ||
+      window.matchMedia('(hover: none) and (pointer: coarse)').matches;
+
+    if (isTouchDevice) {
+      // Hide custom cursor elements on mobile
+      if (cursorRef.current) cursorRef.current.style.display = 'none';
+      if (cursorDotRef.current) cursorDotRef.current.style.display = 'none';
+      return;
+    }
 
     const cursor = cursorRef.current;
     const cursorDot = cursorDotRef.current;
-
     if (!cursor || !cursorDot) return;
 
     // Initialize positions
