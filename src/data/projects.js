@@ -1,5 +1,14 @@
 export const projects = [
   {
+    name: "Semantic Book Recommender",
+    category: "ML Project",
+    description:
+    "A semantic book recommendation system combining embeddings, emotions, and categories to deliver personalized reading suggestions through an interactive Gradio dashboard.",
+    image: "./images/semantic-book-recommendation.png",
+    github: "https://github.com/krishmaniyar/Semantic-Book-Recommendation-System",
+    // demo: "http://51.20.189.64:8000/",
+  },
+  {
     name: "Phishing Detector App",
     category: "ML Project",
     description:
