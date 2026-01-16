@@ -15,7 +15,7 @@ const Hero = () => {
 
       {/* Description */}
       <p className="text-base md:text-xl lg:text-2xl text-text-secondary max-w-2xl lg:max-w-4xl leading-relaxed animate-fadeInUp font-normal mb-8 md:mb-10 px-2">
-        I'm a <strong>Pre-final year CSE student at VIT Vellore</strong> (CGPA: 9.28), enthusiastic about building ML projects with interactive UIs using Flutter and modern frontend technologies. I'm driven by curiosity for tech innovation and enjoy creating impactful, user-friendly applications.
+        I'm a <strong>Third year CSE student at VIT Vellore</strong> (CGPA: 9.3), enthusiastic about building ML projects with interactive UIs using Flutter and modern frontend technologies. I'm driven by curiosity for tech innovation and enjoy creating impactful, user-friendly applications.
       </p>
 
       {/* Action Buttons */}

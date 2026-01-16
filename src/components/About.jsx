@@ -56,7 +56,7 @@ const About = () => {
                   VIT Vellore (2023–2027)
                 </div>
                 <div>
-                  <strong className="text-text-primary">CGPA:</strong> 9.28
+                  <strong className="text-text-primary">CGPA:</strong> 9.3
                 </div>
               </li>
             </ul>
